@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9D1472A-3043-402C-95EF-3FE42095EE02}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VirtualEcosystem</RootNamespace>
+    <AssemblyName>VirtualEcosystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="GameOver.xaml.cs">
+      <DependentUpon>GameOver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IntroPage.xaml.cs">
+      <DependentUpon>IntroPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IPlayerInterface.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Organisms\Armadillo.cs" />
+    <Compile Include="Organisms\HummingBird.cs" />
+    <Compile Include="Organisms\Sparrow.cs" />
+    <Compile Include="Misc\Shop.cs" />
+    <Compile Include="Systems\DaySystem.cs" />
+    <Compile Include="Misc\Item.cs" />
+    <Compile Include="Organisms\Insect.cs" />
+    <Compile Include="Organisms\Organism.cs" />
+    <Compile Include="Organisms\Plant.cs" />
+    <Compile Include="Misc\Player.cs" />
+    <Compile Include="Systems\TemperatureSystem.cs" />
+    <Compile Include="Misc\WeatherModifier.cs" />
+    <Compile Include="Misc\World.cs" />
+    <Compile Include="Tutorial.xaml.cs">
+      <DependentUpon>Tutorial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="WinScreen.xaml.cs">
+      <DependentUpon>WinScreen.xaml</DependentUpon>
+    </Compile>
+    <Page Include="GameOver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IntroPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Tutorial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imgbin-flower-public-domain-flower-tBwyEcczhBgVhArynq2AzFwbR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_day_1327873.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_Temperature_2707502.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_month_3202614.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WoodenLog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lvl1Axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Temperature Alteration Machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Temperature Alteration Machine     Left Button .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LeftButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WoodenInv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WoodenBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lvl2Axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lvl3Axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Armadillo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sparrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dababy_BabyOnBaby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WoodenLogLVL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WoodenLogLVL3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TUTORIAL SS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Months.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="plantIcon.jpg" />
+    <Resource Include="plantIcon.png" />
+    <Resource Include="insectIcon.png" />
+    <Content Include="Sounds\axeBreak.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\backgroundMusic.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\buttonClick.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\buySound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\doorClose.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\seedSound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\sellSound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\shopRing.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\trapSound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\woodChop.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

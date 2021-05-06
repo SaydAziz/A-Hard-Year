@@ -1,0 +1,184 @@
+﻿<Page x:Class="VirtualEcosystem.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VirtualEcosystem"
+      mc:Ignorable="d"
+      Title="MainPage" Height="800" Width="1200">
+
+
+
+
+
+    <Grid x:Name="MainGrid" Background="#FFD1BE4B" Margin="1,0,0,0">
+
+
+        <Image x:Name="THELOG" HorizontalAlignment="Left" Height="184" Margin="26,542,0,0" VerticalAlignment="Top" Width="184" Source="WoodenLog.png"/>
+
+
+        <Image x:Name="THELOG2" HorizontalAlignment="Left" Height="223" Margin="6,533,0,0" VerticalAlignment="Top" Width="226" Source="WoodenLogLVL2.png" Opacity="0"/>
+
+
+        <Image x:Name="THELOG3" HorizontalAlignment="Left" Height="187" Margin="16,546,0,0" VerticalAlignment="Top" Width="197" Source="WoodenLogLVL3.png" Opacity="0"/>
+
+
+        <Button x:Name="btnUse" Content="USE" HorizontalAlignment="Left" Margin="479,530,0,0" VerticalAlignment="Top" Width="117" Height="45" Click="btnUse_Click" Opacity="0" IsEnabled="False"/>
+
+
+        <Rectangle x:Name="crclOuter" Fill="#FFD4D433" HorizontalAlignment="Left" Height="100" Margin="35,18,0,0" Stroke="White" VerticalAlignment="Top" Width="100" RadiusY="50" RadiusX="50"/>
+
+
+        <Rectangle x:Name="crclInner" Fill="#FFFFED35" HorizontalAlignment="Left" Height="80" Margin="45,29,0,0" Stroke="White" VerticalAlignment="Top" Width="80" RadiusY="50" RadiusX="50"/>
+
+
+        <Image HorizontalAlignment="Left" Height="646" Margin="583,88,0,0" VerticalAlignment="Top" Width="565" Source="WoodenBackground.png"/>
+
+
+        <Image x:Name="imgTAM" HorizontalAlignment="Left" Height="248" Margin="524,80,0,0" VerticalAlignment="Top" Width="337" Source="Temperature Alteration Machine.png"/>
+
+
+        <Image HorizontalAlignment="Left" Height="144" Margin="212,580,0,0" VerticalAlignment="Top" Width="660" Source="WoodenInv.png"/>
+
+
+        <Image HorizontalAlignment="Left" Height="44" Margin="252,633,0,0" VerticalAlignment="Top" Width="62" Source="wood.png"/>
+        <Rectangle x:Name="lstTop" Fill="#FEB2681E" HorizontalAlignment="Left" Height="34" Margin="888,138,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="208"/>
+        <TextBlock x:Name="txtTOD" HorizontalAlignment="Center" Margin="64,82,1081,0" TextWrapping="Wrap" Text="  Day" VerticalAlignment="Top" FontFamily="Arial Black" Width="54"/>
+        <TextBlock x:Name="txtTotalDays" HorizontalAlignment="Left" Margin="175,20,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Height="25" Width="31" FontSize="20"/>
+
+        <ScrollViewer Margin="947,177,118,200">
+            <TextBlock x:Name="txtOrganismList" HorizontalAlignment="Left" Height="1385" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115" FontFamily="Microsoft JhengHei" FontSize="15"/>
+        </ScrollViewer>
+        <Label x:Name="txtOrganismListLabel1" Content="Organisms in World" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="910,141,0,0" FontFamily="Arial Black" Height="31" FontSize="15" Width="171"/>
+        <TextBlock x:Name="txtTemperature" HorizontalAlignment="Left" Margin="175,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="31" FontFamily="Yu Gothic UI Semibold" FontSize="20"><Run Text="12"/></TextBlock>
+        <TextBlock x:Name="txtTimer" HorizontalAlignment="Left" Margin="63,35,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Width="48" Height="47" FontSize="40"/>
+        <TextBlock x:Name="txtTOM" HorizontalAlignment="Left" Margin="175,55,0,0" TextWrapping="Wrap" Text="Jan" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontSize="18" Width="43"/>
+        <TextBlock x:Name="txtFireWood" HorizontalAlignment="Left" Margin="283,665,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <Image x:Name="imgTemp" HorizontalAlignment="Left" Height="33" Margin="145,86,0,0" VerticalAlignment="Top" Width="17" Source="noun_Temperature_2707502.png"/>
+        <Image x:Name="imgDay" HorizontalAlignment="Left" Height="42" Margin="132,13,0,0" VerticalAlignment="Top" Width="43" Source="noun_day_1327873.png"/>
+        <Image HorizontalAlignment="Left" Height="27" Margin="140,55,0,0" VerticalAlignment="Top" Width="27" Source="noun_month_3202614.png"/>
+        <Image x:Name="imgAxe" HorizontalAlignment="Left" Height="184" Margin="218,410,0,0" VerticalAlignment="Top" Width="89" Source="lvl1Axe.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="imgAxe_Rotated" HorizontalAlignment="Left" Height="183" Margin="147,468,0,0" VerticalAlignment="Top" Width="88" Source="lvl1Axe.png" RenderTransformOrigin="0.5,0.5" Opacity="0">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.004" ScaleX="0.996"/>
+                    <SkewTransform AngleX="0.133"/>
+                    <RotateTransform Angle="-74.363"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="lblPlus1" Content="+1" HorizontalAlignment="Left" Margin="45,410,0,0" VerticalAlignment="Top" Height="96" Width="90" FontFamily="Impact" FontSize="36" Foreground="#FF4D3903" Opacity="0"/>
+        <Image x:Name="imgFireWood" HorizontalAlignment="Left" Height="68" Margin="94,418,0,0" VerticalAlignment="Top" Width="73" Source="wood.png" Opacity="0"/>
+        <Button x:Name="btnChop" Content="Chop" HorizontalAlignment="Left" Margin="189,418,0,0" VerticalAlignment="Top" Width="151" Click="btnChop_Click" Height="182" Opacity="0"/>
+        <Image x:Name="imgTAM_Left" HorizontalAlignment="Left" Height="56" Margin="621,222,0,0" VerticalAlignment="Top" Width="68" Source="LeftButton.png" Opacity="0"/>
+        <Button x:Name="btnAddTemp" Content="+" HorizontalAlignment="Left" Margin="632,226,0,0" VerticalAlignment="Top" Width="55" Click="btnAddTemp_Click" Background="#FFDDDDDD" BorderBrush="#FF707070" Height="36" Opacity="0"/>
+        <Image x:Name="imgTAM_Right" HorizontalAlignment="Left" Height="52" Margin="692,222,0,0" VerticalAlignment="Top" Width="68" Source="LeftButton.png" Opacity="0"/>
+        <Button x:Name="btnRemoveTemp" Content="-" HorizontalAlignment="Left" Margin="701,226,0,0" VerticalAlignment="Top" Width="54" Click="btnRemoveTemp_Click_1" Height="36" Opacity="0"/>
+        <TextBlock x:Name="txtInv1" HorizontalAlignment="Left" Margin="348,665,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <TextBlock x:Name="txtInv2" HorizontalAlignment="Left" Margin="400,665,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <TextBlock x:Name="txtInv3" HorizontalAlignment="Left" Margin="456,665,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <TextBlock x:Name="txtInv4" HorizontalAlignment="Left" Margin="512,665,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <TextBlock x:Name="txtInv5" HorizontalAlignment="Left" Margin="565,665,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <TextBlock x:Name="txtInv6" HorizontalAlignment="Left" Margin="616,665,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <TextBlock x:Name="txtInv7" HorizontalAlignment="Left" Margin="671,665,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <TextBlock x:Name="txtInv8" HorizontalAlignment="Left" Margin="724,665,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <TextBlock x:Name="txtInv9" HorizontalAlignment="Left" Margin="779,660,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="18"/>
+        <Image x:Name="imgInv1" HorizontalAlignment="Left" Height="44" Margin="317,633,0,0" VerticalAlignment="Top" Width="44"/>
+        <Image x:Name="imgInv2" HorizontalAlignment="Left" Height="44" Margin="370,633,0,0" VerticalAlignment="Top" Width="45"/>
+        <Image x:Name="imgInv3" HorizontalAlignment="Left" Height="43" Margin="423,634,0,0" VerticalAlignment="Top" Width="46"/>
+        <Image x:Name="imgInv4" HorizontalAlignment="Left" Height="43" Margin="477,634,0,0" VerticalAlignment="Top" Width="46"/>
+        <Image x:Name="imgInv5" HorizontalAlignment="Left" Height="44" Margin="530,633,0,0" VerticalAlignment="Top" Width="46"/>
+        <Image x:Name="imgInv6" HorizontalAlignment="Left" Height="44" Margin="584,633,0,0" VerticalAlignment="Top" Width="46"/>
+        <Image x:Name="imgInv7" HorizontalAlignment="Left" Height="44" Margin="639,633,0,0" VerticalAlignment="Top" Width="45"/>
+        <Image x:Name="imgInv8" HorizontalAlignment="Left" Height="44" Margin="692,633,0,0" VerticalAlignment="Top" Width="45"/>
+        <Image x:Name="imgInv9" HorizontalAlignment="Left" Height="44" Margin="746,633,0,0" VerticalAlignment="Top" Width="45"/>
+        <Grid x:Name="Spawner" HorizontalAlignment="Left" Height="264" Margin="75,141,0,0" VerticalAlignment="Top" Width="444"/>
+        <Label x:Name="txtMigration" Content="" HorizontalAlignment="Left" Margin="882,35,0,0" VerticalAlignment="Top" Width="218" Height="44" FontSize="20" FontFamily="Segoe UI Black"/>
+        <Rectangle Fill="#FFF0EB88" HorizontalAlignment="Left" Height="101" Margin="235,18,0,0" VerticalAlignment="Top" Width="295"/>
+
+        <ScrollViewer Margin="239,18,669,681">
+            <TextBlock x:Name="txtLogging" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="775" Width="278"/>
+        </ScrollViewer>
+        <Button x:Name="txtShop" Content="SHOP" HorizontalAlignment="Left" Margin="629,412,0,0" VerticalAlignment="Top" Width="126" Height="45" Background="#FFD1780D" FontSize="30" BorderBrush="Black" FontWeight="Bold" Foreground="#FFFFF2E3" Click="txtShop_Click"/>
+        <Grid x:Name="ShopGrid" HorizontalAlignment="Left" Height="453" Margin="330,129,0,0" VerticalAlignment="Top" Width="542" Background="Black" RenderTransformOrigin="0.5,0.5">
+            <Rectangle Fill="#FFB04444" HorizontalAlignment="Left" Height="433" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="522"/>
+            <Label x:Name="TITLE" Content="SHOP" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Height="94" Width="227" FontSize="72" FontFamily="Segoe UI Black"/>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="321" Margin="24,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="331" IsEnabled="False"/>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="321" Margin="370,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="150"/>
+            <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="34,32,0,0" VerticalAlignment="Top" Width="100" Height="53" Click="btnBack_Click"/>
+            <Button x:Name="btnBuy" Content="BUY" HorizontalAlignment="Left" Margin="385,374,0,0" VerticalAlignment="Top" Width="47" Height="47" Click="btnBuy_Click"/>
+            <Button x:Name="btnSell" Content="SELL" HorizontalAlignment="Left" Margin="455,374,0,0" VerticalAlignment="Top" Width="47" Height="47" Click="btnSell_Click"/>
+            <TextBlock x:Name="txtShopDescription" HorizontalAlignment="Left" Margin="385,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="138" Width="119"/>
+            <Button x:Name="shopSeed" Content="" HorizontalAlignment="Left" Margin="185,154,0,0" VerticalAlignment="Top" Width="60" Height="61" Click="shopSeed_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Seeds.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="shopAxe" Content="" HorizontalAlignment="Left" Margin="120,310,0,0" VerticalAlignment="Top" Width="60" Height="61" Click="shopAxe_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="lvl2Axe.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Label x:Name="lblCoin" Content="0" HorizontalAlignment="Left" Margin="448,35,0,0" VerticalAlignment="Top" Height="42" Width="84" FontSize="26" FontFamily="Trebuchet MS"/>
+            <Image HorizontalAlignment="Left" Height="42" Margin="402,35,0,0" VerticalAlignment="Top" Width="41" Source="coin.png"/>
+            <Label x:Name="lblSelection" Content="" HorizontalAlignment="Left" Margin="380,116,0,0" VerticalAlignment="Top" Width="131" FontSize="16" FontFamily="Segoe UI Black" Height="65"/>
+            <Button x:Name="shopAxe2" Content="" HorizontalAlignment="Left" Margin="185,310,0,0" VerticalAlignment="Top" Width="60" Height="61" Click="shopAxe2_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="lvl3Axe.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="shopSparrow" Content="" HorizontalAlignment="Left" Margin="84,234,0,0" VerticalAlignment="Top" Width="60" Height="61" Click="shopSparrow_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Sparrow.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="shopBird" Content="" HorizontalAlignment="Left" Margin="153,234,0,0" VerticalAlignment="Top" Width="60" Height="61" Click="shopBird_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Bird.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="shopArmadillo" Content="" HorizontalAlignment="Left" Margin="222,234,0,0" VerticalAlignment="Top" Width="60" Height="61" Click="shopArmadillo_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Armadillo.png"/>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="txtItemPricing" HorizontalAlignment="Left" Height="37" Margin="439,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Background="{x:Null}" FontFamily="Segoe UI Semibold" FontSize="24"/>
+            <Image x:Name="coinycoincin" HorizontalAlignment="Left" Height="37" Margin="400,324,0,0" VerticalAlignment="Top" Width="34" Source="coin.png" Opacity="0"/>
+            <Button x:Name="shopWood" Content="" HorizontalAlignment="Left" Margin="120,154,0,0" VerticalAlignment="Top" Width="60" Height="61" Click="shopWood_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="wood.png"/>
+                </Button.Background>
+            </Button>
+
+        </Grid>
+        <Button x:Name="HB1" Content="Button" HorizontalAlignment="Left" Margin="317,633,0,0" VerticalAlignment="Top" Width="45" Height="44" Click="HB1_Click" Opacity="0"/>
+        <Button x:Name="HB2" Content="Button" HorizontalAlignment="Left" Margin="371,633,0,0" VerticalAlignment="Top" Width="44" Height="44" Click="HB2_Click" Opacity="0"/>
+        <Button x:Name="HB3" Content="Button" HorizontalAlignment="Left" Margin="424,634,0,0" VerticalAlignment="Top" Width="45" Height="42" Click="HB3_Click" Opacity="0"/>
+        <Button x:Name="HB4" Content="Button" HorizontalAlignment="Left" Margin="479,634,0,0" VerticalAlignment="Top" Width="42" Height="42" Click="HB4_Click" Opacity="0"/>
+        <Button x:Name="HB5" Content="Button" HorizontalAlignment="Left" Margin="531,634,0,0" VerticalAlignment="Top" Width="45" Height="43" Click="HB5_Click" Opacity="0"/>
+        <Button x:Name="HB6" Content="Button" HorizontalAlignment="Left" Margin="586,634,0,0" VerticalAlignment="Top" Width="44" Height="42" Click="HB6_Click" Opacity="0"/>
+        <Button x:Name="HB7" Content="Button" HorizontalAlignment="Left" Margin="639,633,0,0" VerticalAlignment="Top" Width="45" Height="44" Click="HB7_Click" Opacity="0"/>
+        <Button x:Name="HB8" Content="Button" HorizontalAlignment="Left" Margin="692,634,0,0" VerticalAlignment="Top" Width="45" Height="43" Click="HB8_Click" Opacity="0"/>
+        <Button x:Name="HB9" Content="Button" HorizontalAlignment="Left" Margin="747,633,0,0" VerticalAlignment="Top" Width="44" Height="43" Click="HB9_Click" Opacity="0"/>
+        <Image x:Name="imgSeed" HorizontalAlignment="Left" Height="100" Margin="-544,226,0,0" VerticalAlignment="Top" Width="100" Source="Seeds.png"/>
+        <Image x:Name="imgArmadillo" HorizontalAlignment="Left" Height="100" Margin="-544,357,0,0" VerticalAlignment="Top" Width="100" Source="Armadillo.png"/>
+        <Image x:Name="imgBird" HorizontalAlignment="Left" Height="100" Margin="-544,494,0,0" VerticalAlignment="Top" Width="100" Source="Bird.png"/>
+        <Image x:Name="imgSparrow" HorizontalAlignment="Left" Height="100" Margin="-544,634,0,0" VerticalAlignment="Top" Width="100" Source="Sparrow.png"/>
+        <Image x:Name="imgAXE" HorizontalAlignment="Left" Height="100" Margin="-710,228,0,0" VerticalAlignment="Top" Width="68" Source="lvl2Axe.png"/>
+        <Image x:Name="imgAXE2" HorizontalAlignment="Left" Height="100" Margin="-710,357,0,0" VerticalAlignment="Top" Width="68" Source="lvl3Axe.png"/>
+        <TextBlock x:Name="txtTotalPlants" HorizontalAlignment="Left" Margin="949,612,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="34" Width="48" FontWeight="Bold" FontSize="30"/>
+        <TextBlock x:Name="txtTotalInsects" HorizontalAlignment="Left" Margin="1043,612,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="34" Width="44" FontWeight="Bold" FontSize="30"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="909,615,0,0" VerticalAlignment="Top" Width="35" Source="plantIcon.png"/>
+        <Image HorizontalAlignment="Left" Height="42" Margin="997,612,0,0" VerticalAlignment="Top" Width="46" Source="insectIcon.png"/>
+    </Grid>
+</Page>

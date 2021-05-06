@@ -1,0 +1,52 @@
+﻿<Page x:Class="VirtualEcosystem.Tutorial"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VirtualEcosystem"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="Tutorial">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFFE055" Offset="0"/>
+                <GradientStop Color="#FFB05A12" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="btnIntro" Content="Introduction" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Height="82" FontSize="48" Click="btnIntro_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="900,0,0,0" VerticalAlignment="Top" Width="300" Height="82" FontSize="48" Click="btnBack_Click"/>
+        <Button x:Name="btnBasics" Content="Basics" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="300" Height="82" FontSize="48" Click="btnBasics_Click"/>
+        <Button x:Name="btnSafe" Content="Safety" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Height="82" Margin="600,0,0,0" FontSize="48" Click="btnSafe_Click"/>
+        <Grid x:Name="Basics" HorizontalAlignment="Left" Height="713" Margin="0,87,0,0" VerticalAlignment="Top" Width="1200">
+            <Image x:Name="imgSS" HorizontalAlignment="Left" Height="436" Margin="30,128,0,0" VerticalAlignment="Top" Width="656" Source="TUTORIAL SS.png"/>
+            <TextBlock HorizontalAlignment="Left" Margin="30,37,0,0" TextWrapping="Wrap" Text="This is what the main screen looks like. Lets get you familiar with it!" VerticalAlignment="Top" Height="46" Width="852" FontSize="24" FontFamily="Segoe UI Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="720,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="492" Width="414" FontSize="24"><Run Foreground="#FFFF1B1B" FontWeight="Bold" FontStyle="Italic" Text="1. "/><Run FontWeight="Bold" Text="Information Deck "/><Run Text="- Shows you the time left until it's night/day, and the current day, month, "/><Run Text="and temperature."/><LineBreak/><Run/><LineBreak/><Run Foreground="#FF36F000" FontWeight="Bold" FontStyle="Italic" Text="2. "/><Run FontWeight="Bold" Text="History Screen "/><Run Text="- Shows what died on the previous day, and why."/><LineBreak/><Run/><LineBreak/><Run Foreground="#FF00D6D6" FontWeight="Bold" FontStyle="Italic" Text="3. "/><Run FontWeight="Bold" Text="World Screen "/><Run Text="- Shows what living things are currently in the environment."/><LineBreak/><Run/><LineBreak/><Run Foreground="#FF5408C3" FontWeight="Bold" FontStyle="Italic" Text="4. "/><Run FontWeight="Bold" Text="Temperature Alteration Machine "/><Run Text="- Used to increase/decrease the current temperature."/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="56,569,0,0" TextWrapping="Wrap" Text="The two populations rely on eachother, and will need eachother to survive. You can plant the seeds in order to add to the plant population. The insect population however, is not alterable." VerticalAlignment="Top" Height="93" Width="580" FontSize="20"/>
+
+        </Grid>
+        <Grid x:Name="Introduction" HorizontalAlignment="Left" Height="713" VerticalAlignment="Top" Width="1200" Margin="0,87,0,0" Opacity="0">
+            <Label Content="Welcome to A Hard Year" HorizontalAlignment="Left" Margin="272,32,0,0" VerticalAlignment="Top" Width="640" Height="84" FontSize="48" FontFamily="Segoe UI Black"/>
+            <Label Content="GOAL:" HorizontalAlignment="Left" Margin="36,97,0,0" VerticalAlignment="Top" Height="70" Width="154" FontSize="36" FontFamily="Segoe UI Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="36,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="1129" FontSize="36"><Run Text="Keep the Yucca Plant, and Insect population alive for a full year."/><InlineUIContainer>
+                    
+                </InlineUIContainer></TextBlock>
+            <Label Content="Challenges:" HorizontalAlignment="Left" Margin="36,246,0,0" VerticalAlignment="Top" Height="70" Width="241" FontSize="36" FontFamily="Segoe UI Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="36,316,0,0" TextWrapping="Wrap" Text="Keeping the Yucca population alive will not be so easy. You will have to pay attention to two key dangers." VerticalAlignment="Top" Height="108" Width="1129" FontSize="36"/>
+            <Label Content="Danger 1:" HorizontalAlignment="Left" Margin="36,424,0,0" VerticalAlignment="Top" Height="70" Width="241" FontSize="36" FontFamily="Segoe UI Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="36,494,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="191" Width="448" FontSize="32" Text="Keep the temperature at a safe range, or the populations will die of heat or the cold."/>
+            <Label Content="Danger 2:" HorizontalAlignment="Left" Margin="646,424,0,0" VerticalAlignment="Top" Height="70" Width="241" FontSize="36" FontFamily="Segoe UI Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="646,494,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="191" Width="448" FontSize="32" Text="Buy traps to fiend off animals that eat plants and insects, or they will eat them all up. "/>
+             </Grid>
+        <Grid x:Name="Safety" HorizontalAlignment="Left" Height="713" Margin="0,87,0,0" VerticalAlignment="Top" Width="1200" Opacity="0">
+            <Label Content="Keeping Safe" HorizontalAlignment="Left" Margin="408,10,0,0" VerticalAlignment="Top" Height="79" Width="347" FontSize="48" FontFamily="Segoe UI Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="146,94,0,0" TextWrapping="Wrap" Text="If you follow this checklist, you will keep your populations safe, and will calmly make it through the year. Stray from this and it may get a little challenging!" VerticalAlignment="Top" Height="101" Width="873" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="31,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="449" Width="372" FontWeight="Bold" FontSize="20"><Run Text="1. Check the temperature!"/><LineBreak/><Run FontWeight="Normal" Text="Yucca Plants do not survive under 16°C, so keep the temperature above that at all times. "/><LineBreak/><Run FontWeight="Normal" Text=""/><LineBreak/><Run FontWeight="Normal" Text="Yucca Insects have a hard time above 31°C, so make sure its not that hot. Or they die..."/><LineBreak/><Run FontWeight="Normal"/><LineBreak/><Run FontWeight="Normal" Text="Use the Temperature Alteration Machine to keep safe temperatures! It is powered by firewood so make sure you have enough in stock."/><LineBreak/><Run FontWeight="Normal"/><LineBreak/><Run FontWeight="Normal" Text="Tip: The color of the background changes if its too cold ("/><Run Foreground="#FF0163A6" FontWeight="Normal" Text="Blue"/><Run FontWeight="Normal" Text=") or too hot ("/><Run Foreground="#FFDC0000" FontWeight="Normal" Text="Red"/><Run FontWeight="Normal" Text=")."/><LineBreak/><Run FontWeight="Normal"/><LineBreak/><Run FontWeight="Normal"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="421,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="355" Width="334" FontWeight="Bold" FontSize="20"><Run Text="2. Watch out for Migration Season!"/><LineBreak/><Run FontWeight="Normal" Text="Sparrows, Hummingbirds, and Armadillos tend to pop up looking for food. "/><LineBreak/><Run FontWeight="Normal"/><LineBreak/><Run Text="Sparrows"/><Run FontWeight="Normal" Text=" eat "/><Run FontWeight="Normal" FontStyle="Italic" Text="Plants"/><LineBreak/><Run Text="Armadillos"/><Run FontWeight="Normal" Text=" eat "/><Run FontWeight="Normal" FontStyle="Italic" Text="Insects"/><LineBreak/><Run Text="Hummingbirds"/><Run FontWeight="Normal" Text=" eat "/><Run FontWeight="Normal" FontStyle="Italic" Text="both"/><LineBreak/><Run FontWeight="Normal"/><LineBreak/><Run FontWeight="Normal" Text="You can buy traps to get rid of them as soon as they come out. Make sure you have enough gold on hand!"/><LineBreak/><Run/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="784,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="436" Width="360" FontWeight="Bold" FontSize="20"><Run Text="3. Keep a surplus of resources"/><LineBreak/><Run FontWeight="Normal" Text="Keep an eye on the two main resources: "/><LineBreak/><Run FontWeight="Normal" Text="Firewood and Gold."/><LineBreak/><Run/><LineBreak/><Run FontWeight="Normal" Text="Chop the infinite tree stump to obtain firewood. You can use it to alter the temperature using the T.A.M. Watch out though, the later into the year you are, the harder the stump gets, making it harder for your axe to chop."/><LineBreak/><Run FontWeight="Normal"/><LineBreak/><Run FontWeight="Normal" Text="Make sure you collect seeds that the plants drop by chance. You can sell them to obtain Gold, and buy traps or better Axes. "/></TextBlock>
+        </Grid>
+
+    </Grid>
+
+</Page>
